@@ -54,38 +54,38 @@ def logout():
 
 logout_page = st.Page(
     logout,
-    title="Log out",
+    title="Salir",
     icon=":material/logout:"
 )
 
 settings = st.Page(
     "settings.py",
-    title="Settings",
+    title="Configuración",
     icon=":material/settings:"
 )
 
 request_1 = st.Page(
-    "request/request_1.py",
-    title="Request 1",
+    "informador/informador_1.py",
+    title="Datos 1",
     icon=":material/help:",
     default=(role == "Informador"),
 )
 
 request_2 = st.Page(
-    "request/request_2.py",
-    title="Request 2",
+    "informador/informador_2.py",
+    title="Datos 2",
     icon=":material/bug_report:"
 )
 
 respond_1 = st.Page(
-    "respond/respond_1.py",
-    title="Respond 1",
+    "observador/observador_1.py",
+    title="Dashboard 1",
     icon=":material/healing:",
     default=(role == "Observador"),
 )
 respond_2 = st.Page(
-    "respond/respond_2.py",
-    title="Respond 2",
+    "observador/observador_2.py",
+    title="Dashboard 2",
     icon=":material/handyman:"
 )
 
@@ -111,10 +111,10 @@ st.title("Cálculo de Impacto Económico")
 st.logo("images/horizontal_blue.png", icon_image="images/icon_blue.png")
 page_dict = {}
 if role in ["Informador", "Admin"]:
-    page_dict["Request"] = request_pages
-    page_dict["Respond"] = respond_pages
+    page_dict["Carga Data"] = request_pages
+    page_dict["Dashboards"] = respond_pages
 if role in ["Observador", "Admin"]:
-    page_dict["Respond"] = respond_pages
+    page_dict["Dashboards"] = respond_pages
 if role == "Admin":
     page_dict["Admin"] = admin_pages
 
