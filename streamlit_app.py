@@ -9,20 +9,27 @@ if "user" not in st.session_state:
 
 ROLES = [None, "Informador", "Observador", "Admin"]
 
-usuarios = [{
-    "rut": "10000000-1",
-    "rut_empresa": "90000000-K",
-    "rol": ROLES[1],
-},
-{
-    "rut": "10000000-2",
-    "rut_empresa": "90000000-K",
-    "rol": ROLES[2],
-},
+usuarios = [
+    {
+        "rut": "10000000-1",
+        "nombre_empresa": "ACME",
+        "rut_empresa": "44111777-R",
+        "rol": ROLES[1],
+        "password": "password",
+    },
+    {
+        "rut": "10000000-2",
+        "nombre_empresa": "ACME",
+        "rut_empresa": "44111777-R",
+        "rol": ROLES[2],
+        "password": "password",
+    },
     {
         "rut": "10000000-3",
+        "nombre_empresa": "MAX",
         "rut_empresa": "90000000-L",
         "rol": ROLES[2],
+        "password": "password",
     }
 ]
 
@@ -37,10 +44,14 @@ def login():
         value=rol,
         disabled=True
     )
+    password = st.text_input("Password", type="password")
     if st.button("Aceptar"):
-        st.session_state.user = [u for u in usuarios if u["rut"] == usuario][0]
-        st.session_state.role = st.session_state.user["rol"]
-        st.rerun()
+        if password != "password":
+            st.error("Passwords do not match")
+        else:
+            st.session_state.user = [u for u in usuarios if u["rut"] == usuario][0]
+            st.session_state.role = st.session_state.user["rol"]
+            st.rerun()
 
 
 role = st.session_state.role
@@ -66,14 +77,14 @@ settings = st.Page(
 
 request_1 = st.Page(
     "informador/informador_1.py",
-    title="Datos 1",
+    title="Datos Básicos",
     icon=":material/help:",
     default=(role == "Informador"),
 )
 
 request_2 = st.Page(
     "informador/informador_2.py",
-    title="Datos 2",
+    title="Ingresos y Gastos",
     icon=":material/bug_report:"
 )
 
