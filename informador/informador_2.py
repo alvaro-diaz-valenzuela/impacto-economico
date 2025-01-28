@@ -50,3 +50,18 @@ with ((st.expander("### Proveedores de Servicios", expanded=True))):
             "Número Proveedores Internacionales Servicios", min_value=0, max_value=1_000, step=1)
         gasto_internacional = st.number_input(
             "Gasto Proveedores Internacionales Servicios (MM USD)", min_value=0, max_value=1_000_000_000, step=1)
+
+with ((st.expander("### Gasto e Inversión e Personas", expanded=True))):
+    col1, col2 = st.columns(2)
+    with col1:
+        remuneraciones_brutas = st.number_input(
+            "Remuneraciones Brutas (MM CLP)", min_value=0, max_value=1_000, step=1)
+        num_empleados_permanentes = st.number_input(
+            "Número de Empleados Permanentes", min_value=0, max_value=1_000_000_000, step=1)
+        num_empleados_esporadicos = st.number_input(
+            "Número de Empleados Esporádicos (Promedio Anual)", min_value=0, max_value=1_000_000_000, step=1)
+    with col2:
+        inversion_comunidades = st.number_input(
+            "Inversión en Comunidades (MM CLP)", min_value=0, max_value=1_000, step=1)
+        inversion_ambiental = st.number_input(
+            "Inversión Ambiental (MM CLP)", min_value=0, max_value=1_000_000_000, step=1)
