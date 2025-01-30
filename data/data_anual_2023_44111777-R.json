@@ -1,0 +1,54 @@
+{
+    "agno": 2023,
+    "empresa": {
+        "nombre_empresa": "ACME",
+        "region_matriz": "VA",
+        "rut_empresa": "44111777-R",
+        "regiones_opera": [
+            "AP",
+            "AN",
+            "CO",
+            "RM",
+            "MA"
+        ]
+    },
+    "ventas_impuestos": {
+        "ventas": 20230,
+        "exportaciones": 23,
+        "importaciones": 5,
+        "primera_cat": 203,
+        "iva": 23,
+        "otros_impuestos": 0
+    },
+    "proveedores_bienes": {
+        "num_proveedores_bienes": 23,
+        "insumos": [
+            "Químicos",
+            "Explosivos"
+        ],
+        "gasto_total_bienes": 73,
+        "num_local_bienes": 5,
+        "gasto_local_bienes": 53,
+        "num_proveedores_internacional_bienes": 2,
+        "gasto_internacional_bienes": 1
+    },
+    "proveedores_servicios": {
+        "num_proveedores_servicios": 10,
+        "servicios": [
+            "RRHH",
+            "Legales"
+        ],
+        "gasto_total_servicios": 173,
+        "num_local_servicios": 2,
+        "gasto_local_servicios": 93,
+        "num_proveedores_internacional_servicios": 1,
+        "gasto_internacional_servicios": 1
+    },
+    "gasto_inversion_personas": {
+        "remuneraciones_brutas": 823,
+        "num_empleados_permanentes": 93,
+        "num_empleados_esporadicos": 20,
+        "inversion_comunidades": 33,
+        "inversion_ambiental": 23
+    }
+}

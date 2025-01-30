@@ -89,7 +89,7 @@ request_2 = st.Page(
 
 respond_1 = st.Page(
     "observador/observador_1.py",
-    title="Dashboard 1",
+    title="Datos de la Empresa",
     icon=":material/healing:",
     default=(role == "Observador"),
 )

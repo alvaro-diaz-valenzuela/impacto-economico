@@ -1,0 +1,12 @@
+{
+    "nombre_empresa": "ACME",
+    "region_matriz": "VA",
+    "rut_empresa": "44111777-R",
+    "regiones_opera": [
+        "AP",
+        "AN",
+        "CO",
+        "RM",
+        "MA"
+    ]
+}
