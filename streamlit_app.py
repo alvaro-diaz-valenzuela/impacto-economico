@@ -93,9 +93,16 @@ respond_1 = st.Page(
     icon=":material/healing:",
     default=(role == "Observador"),
 )
-respond_2 = st.Page(
-    "observador/observador_2.py",
-    title="Dashboard 2",
+
+# respond_2 = st.Page(
+#     "observador/observador_2.py",
+#     title="Dashboard 2",
+#     icon=":material/handyman:"
+# )
+
+sqm_2023 = st.Page(
+    "observador/sqm_2023.py",
+    title="Dashboard",
     icon=":material/handyman:"
 )
 
@@ -114,7 +121,7 @@ admin_2 = st.Page(
 
 account_pages = [logout_page, settings]
 request_pages = [request_1, request_2]
-respond_pages = [respond_1, respond_2]
+respond_pages = [respond_1, sqm_2023]
 admin_pages = [admin_1, admin_2]
 
 st.title("Cálculo de Impacto Económico")
