@@ -17,9 +17,11 @@ MarkupSafe==3.0.2
 mdurl==0.1.2
 narwhals==1.24.0
 numpy==2.2.2
+openpyxl==3.1.5
 packaging==24.2
 pandas==2.2.3
 pillow==11.1.0
+plotly==6.0.0
 protobuf==5.29.3
 pyarrow==19.0.0
 pydantic==2.10.6
@@ -34,7 +36,7 @@ rich==13.9.4
 rpds-py==0.22.3
 six==1.17.0
 smmap==5.0.2
-streamlit==1.41.1
+streamlit==1.43.0
 tenacity==9.0.0
 toml==0.10.2
 tornado==6.4.2
